@@ -1,4 +1,4 @@
-This is a react project 
+This is a react contact manager built with react, context API, lifecycle methods and an admin dashboard.
 
 ## Getting Started
 - git clone this project
