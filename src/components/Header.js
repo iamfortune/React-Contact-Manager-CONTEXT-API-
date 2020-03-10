@@ -5,7 +5,7 @@ function Header() {
         <div>
             <h1>Kay's Contact Manager</h1>
         </div>
-    )
+    );
 }
 
-
+export default Header;
