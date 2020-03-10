@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Header() {
+const Header = () => {
     return(
         <div>
             <h1>Kay's Contact Manager</h1>
