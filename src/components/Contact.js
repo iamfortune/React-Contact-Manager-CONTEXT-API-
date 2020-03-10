@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+
 
 class Contact extends Component {
     render() {
@@ -11,6 +13,10 @@ class Contact extends Component {
             </div>
         );
     }
+}
+
+Contact.propsTypes = {
+    name: PropTypes
 }
 
 export default Contact;
