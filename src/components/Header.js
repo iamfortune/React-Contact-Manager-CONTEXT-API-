@@ -16,7 +16,7 @@ const Header = (props) => {
 
 
 Header.defaultProps = {
-    branding: "My App"
+    branding: 'Kay Contact Manager'
 };
 
 Header.propTypes = {
