@@ -9,7 +9,7 @@ class Contact extends Component {
 
 
     onShowClick = e => {
-        this.state({ showContactInfo: 
+        this.setState({ showContactInfo: 
             !this.state.showContactInfo
          });
     };
