@@ -3,8 +3,11 @@ import PropTypes from 'prop-types';
 
 
 class Contact extends Component {
-    onShowClick() {
-        console.log('Hello world')
+    state = {}
+
+
+    onShowClick = () => {
+        console.log(this.state);
     }
 
 
