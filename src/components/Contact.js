@@ -7,21 +7,15 @@ class Contact extends Component {
         showContactInfo: true
     };
 
-
-    onShowClick = e => {
-        this.setState({ showContactInfo: 
-            !this.state.showContactInfo
-         });
-    };
-
-
+  
     render() {
         const { name, email, phone } = this.props.contact;
         return (
             <div className="card card-body mb-3">
                 <h4>
                     {name} <i 
-                    onClick={this.onShowClick}
+                    onClick={() => this.setState({
+                        showContactInfo: !this.state.showContactInfo })}
                     className="fas fa-sort-down" />
                 </h4>
                 <ul className="list-group">
