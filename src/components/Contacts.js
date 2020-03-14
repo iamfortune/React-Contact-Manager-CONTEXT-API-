@@ -32,12 +32,13 @@ class Contacts extends Component {
         return (
           
             <div>
-                {contacts.map(contact => 
-                <Contact name={contact.name}
+                {contacts.map(contact => (
+                <Contact 
+                 name={contact.name}
                  email={contact.email}
                  phone={contact.phone}
                  />
-                )}
+                ))}
             </div>
         )
     }
