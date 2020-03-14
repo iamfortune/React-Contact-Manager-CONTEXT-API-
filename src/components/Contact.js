@@ -3,12 +3,10 @@ import PropTypes from 'prop-types';
 
 
 class Contact extends Component {
-    state = {}
+    state = {};
 
 
-    onShowClick = () => {
-        console.log(this.state);
-    }
+    onShowClick = e => {};
 
 
     render() {

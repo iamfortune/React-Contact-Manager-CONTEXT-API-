@@ -32,14 +32,14 @@ class Contacts extends Component {
 
         return (
           
-            <div>
+            <React.Fragment>
                 {contacts.map(contact => (
                 <Contact 
                    key={contact.id}
                    contact={contact}
                  />
                 ))}
-            </div>
+            </React.Fragment>
         );
     }
   
