@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 class Contact extends Component {
     render() {
-        const { contact } = this.props.contact;
+        const { name, email, phone } = this.props.contact;
         return (
             <div className="card card-body mb-3">
                 <h4>{name}</h4>
