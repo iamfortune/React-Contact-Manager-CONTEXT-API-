@@ -27,9 +27,13 @@ class Contacts extends Component {
         };
     }
     render() {
+        const { contacts } = this.state;
         return (
+          
             <div>
-                
+                {contacts.map(contact => (
+                    <h1>{contact.name}</h1>
+                ))}
             </div>
         )
     }
