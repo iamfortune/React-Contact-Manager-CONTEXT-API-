@@ -2,7 +2,11 @@ import React, {Component} from 'react'
 
 const Context = React.createContext();
 
-const reducer = 
+const reducer = (state, action) => {
+  switch() {
+    
+  }
+}
 
 
 export class Provider extends Component {
