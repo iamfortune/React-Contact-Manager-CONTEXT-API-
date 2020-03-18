@@ -7,13 +7,13 @@ const reducer = (state, action) => {
     case 'DELETE_ACTION':
       return {
         ...state,
-        contacts: state.contacts.filter(contact =>
-        contact.id !== action.payload)
+        contacts: state.contacts.filter(
+          contact => contact.id !== action.payload)
       }
       default:
         return state;
   }
-}
+};
 
 
 export class Provider extends Component {

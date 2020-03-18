@@ -11,7 +11,7 @@ class Contact extends Component {
     onDeleteClick = (id, dispatch) => {
         dispatch({type: 'DELETE_CONTACT', payload: id});
     }
-  
+   
     render() {
         const { id, name, email, phone } = 
         this.props.contact;
