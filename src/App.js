@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Contacts from './components/contacts/Contacts';
-import Header from "./components/layouts/Header";
+import Header from "./components/layout/Header";
 
 import { Provider } from './Context';
 
