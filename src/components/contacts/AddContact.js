@@ -1,6 +1,13 @@
 import React, { Component } from 'react';
 
 class AddContact extends Component {
+    state = {
+        name: '',
+        email: '',
+        phone: ''
+    }
+
+    
     render() {
         return (
             <div>
