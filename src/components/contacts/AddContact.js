@@ -7,11 +7,16 @@ class AddContact extends Component {
         phone: ''
     }
 
-    
+
     render() {
         return (
-            <div>
-               <h1>Add Contact</h1> 
+            <div className="card mb-3">
+               <div className="card-header">Add Contact</div>
+               <div className="card-body">
+                   <form>
+                       
+                   </form>
+               </div>
             </div>
         );
     }
