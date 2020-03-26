@@ -10,12 +10,12 @@ class AddContact extends Component {
 
     render() {
         return (
-            // mb-3 stands for margin bottom 3
+          // mb-3 stands for margin bottom 3
           <div className="card mb-3">
             <div className="card-header">Add Contact</div>
             <div className="card-body">
               <form>
-                  {/* text input for name */}
+                {/* text input for name */}
                 <div className="form-group">
                   <label htmlFor="name">Name</label>
                   <input
@@ -27,7 +27,17 @@ class AddContact extends Component {
                 </div>
                 {/* Text input for email */}
                 <div className="form-group">
-                  <label htmlFor="name">Name</label>
+                  <label htmlFor="email">Email</label>
+                  <input
+                    name="email"
+                    type="email"
+                    className="form-control form-control-lg"
+                    placeholder="you@example.com"
+                  />
+                </div>
+                {/* text input for phone */}
+                <div className="form-group">
+                  <label htmlFor="name">phone</label>
                   <input
                     name="name"
                     type="text"
