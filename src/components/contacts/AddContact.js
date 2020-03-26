@@ -40,11 +40,13 @@ class AddContact extends Component {
                   <label htmlFor="phone">phone</label>
                   <input
                     type="text"
-                    name="text"
+                    name="phone"
                     className="form-control form-control-lg"
-                    placeholder="Enter Name..."
+                    placeholder="Enter Phone Number..."
                   />
                 </div>
+                {/* Adding a submit button for the form */}
+                <input type="submit" value=""/>
               </form>
             </div>
           </div>
