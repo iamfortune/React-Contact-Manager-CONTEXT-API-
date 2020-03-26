@@ -19,8 +19,8 @@ class AddContact extends Component {
                 <div className="form-group">
                   <label htmlFor="name">Name</label>
                   <input
-                    name="name"
                     type="text"
+                    name="name"
                     className="form-control form-control-lg"
                     placeholder="Enter Name..."
                   />
@@ -29,18 +29,18 @@ class AddContact extends Component {
                 <div className="form-group">
                   <label htmlFor="email">Email</label>
                   <input
-                    name="email"
                     type="email"
+                    name="email"
                     className="form-control form-control-lg"
                     placeholder="you@example.com"
                   />
                 </div>
                 {/* text input for phone */}
                 <div className="form-group">
-                  <label htmlFor="name">phone</label>
+                  <label htmlFor="phone">phone</label>
                   <input
-                    name="name"
                     type="text"
+                    name="text"
                     className="form-control form-control-lg"
                     placeholder="Enter Name..."
                   />
