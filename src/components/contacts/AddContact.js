@@ -9,6 +9,7 @@ class AddContact extends Component {
 
 
     render() {
+        const { name, email, phone } = this.state;
         return (
           // mb-3 stands for margin bottom 3
           <div className="card mb-3">
@@ -23,6 +24,7 @@ class AddContact extends Component {
                     name="name"
                     className="form-control form-control-lg"
                     placeholder="Enter Name..."
+                    value={name}
                   />
                 </div>
                 {/* Text input for email */}
@@ -33,6 +35,7 @@ class AddContact extends Component {
                     name="email"
                     className="form-control form-control-lg"
                     placeholder="you@example.com"
+                    value={email}
                   />
                 </div>
                 {/* text input for phone */}
@@ -43,6 +46,7 @@ class AddContact extends Component {
                     name="phone"
                     className="form-control form-control-lg"
                     placeholder="Enter Phone Number..."
+                    value={phone}
                   />
                 </div>
                 {/* Adding a submit button for the form */}
