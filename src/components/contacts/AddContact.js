@@ -7,11 +7,13 @@ class AddContact extends Component {
         phone: ''
     }
 
+    // submit method for form submit button
     onSubmit = (e) => {
         e.preventDefault();
         console.log(this.state);
     }
 
+    // form submit method for input, this is used to update state as we type input
     onChange = e => this.setState({ [e.target.name]: 
     e.target.value}); 
 
