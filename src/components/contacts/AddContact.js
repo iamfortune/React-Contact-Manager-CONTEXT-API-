@@ -25,6 +25,7 @@ class AddContact extends Component {
                     className="form-control form-control-lg"
                     placeholder="Enter Name..."
                     value={name}
+                    onChange={this.onChange}
                   />
                 </div>
                 {/* Text input for email */}
@@ -36,6 +37,7 @@ class AddContact extends Component {
                     className="form-control form-control-lg"
                     placeholder="you@example.com"
                     value={email}
+                    onChange={this.onChange}
                   />
                 </div>
                 {/* text input for phone */}
@@ -47,6 +49,7 @@ class AddContact extends Component {
                     className="form-control form-control-lg"
                     placeholder="Enter Phone Number..."
                     value={phone}
+                    onChange={this.onChange}
                   />
                 </div>
                 {/* Adding a submit button for the form */}
