@@ -8,7 +8,7 @@ class AddContact extends Component {
     }
 
     onChange = e => this.setState({ [e.target.name]: 
-    e.target.value});
+    e.target.value}); 
 
 
     render() {
@@ -18,7 +18,8 @@ class AddContact extends Component {
           <div className="card mb-3">
             <div className="card-header">Add Contact</div>
             <div className="card-body">
-              <form>
+                {/* form submit handler */}
+              <form onSubmit={this.onSubmit}>
                 {/* text input for name */}
                 <div className="form-group">
                   <label htmlFor="name">Name</label>
