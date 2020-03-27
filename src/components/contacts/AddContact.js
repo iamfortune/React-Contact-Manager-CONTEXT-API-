@@ -7,6 +7,9 @@ class AddContact extends Component {
         phone: ''
     }
 
+    onChange = e => this.setState({ [e.target.name]: 
+    e.target.value});
+
 
     render() {
         const { name, email, phone } = this.state;
