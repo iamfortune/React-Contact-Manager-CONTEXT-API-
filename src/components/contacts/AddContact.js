@@ -1,89 +1,77 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
 class AddContact extends Component {
-    constructor(props) {
-        super(props);
-
-        this.nameInput = React.createRef();
-        this.emailInput = React.createRef();
-        this.phoneInput = React.createRef();
+    state = {
+        name: '',
+        email: '',
+        phone: ''
     }
 
-
-  // submit method for form submit button
-  onSubmit = e => {
-    e.preventDefault();
-    const contact = {
-      name: this.nameInput.current.value,
-      email: this.emailInput.current.value,
-      phone: this.phoneInput.current.value
+    // submit method for form submit button
+    onSubmit = (e) => {
+        e.preventDefault();
+        console.log(this.state);
     }
 
-    console.log(contact);
-  };
+    // form submit method for input, this is used to update state as we type input
+    onChange = e => this.setState({ [e.target.name]: 
+    e.target.value}); 
 
-  static defaultProps = {
-      name: 'Fred Smith',
-      email: 'fred@yahoo.com',
-      phone: '777777777'
-  }
 
-  render() {
-    const { name, email, phone } = this.props;
-    return (
-      // mb-3 stands for margin bottom 3
-      <div className="card mb-3">
-        <div className="card-header">Add Contact</div>
-        <div className="card-body">
-          {/* form submit handler */}
-          <form onSubmit={this.onSubmit}>
-            {/* text input for name */}
-            <div className="form-group">
-              <label htmlFor="name">Name</label>
-              <input
-                type="text"
-                name="name"
-                className="form-control form-control-lg"
-                placeholder="Enter Name..."
-                defaultValue={name}
-                ref={this.nameInput}
-              />
+    render() {
+        const { name, email, phone } = this.state;
+        return (
+          // mb-3 stands for margin bottom 3
+          <div className="card mb-3">
+            <div className="card-header">Add Contact</div>
+            <div className="card-body">
+                {/* form submit handler */}
+              <form onSubmit={this.onSubmit}>
+                {/* text input for name */}
+                <div className="form-group">
+                  <label htmlFor="name">Name</label>
+                  <input
+                    type="text"
+                    name="name"
+                    className="form-control form-control-lg"
+                    placeholder="Enter Name..."
+                    value={name}
+                    onChange={this.onChange}
+                  />
+                </div>
+                {/* Text input for email */}
+                <div className="form-group">
+                  <label htmlFor="email">Email</label>
+                  <input
+                    type="email"
+                    name="email"
+                    className="form-control form-control-lg"
+                    placeholder="you@example.com"
+                    value={email}
+                    onChange={this.onChange}
+                  />
+                </div>
+                {/* text input for phone */}
+                <div className="form-group">
+                  <label htmlFor="phone">phone</label>
+                  <input
+                    type="text"
+                    name="phone"
+                    className="form-control form-control-lg"
+                    placeholder="Enter Phone Number..."
+                    value={phone}
+                    onChange={this.onChange}
+                  />
+                </div>
+                {/* Adding a submit button for the form */}
+                <input type="submit" value="Add Contact"
+                className="btn btn-light btn-block"
+                />
+              </form>
             </div>
-            {/* Text input for email */}
-            <div className="form-group">
-              <label htmlFor="email">Email</label>
-              <input
-                type="email"
-                name="email"
-                className="form-control form-control-lg"
-                placeholder="you@example.com"
-                defaultValue={email}
-                ref={this.emailInput}
-              />
-            </div>
-            {/* text input for phone */}
-            <div className="form-group">
-              <label htmlFor="phone">phone</label>
-              <input
-                type="text"
-                name="phone"
-                className="form-control form-control-lg"
-                placeholder="Enter Phone Number..."
-                defaultValue={phone}
-                ref={this.phoneInput}
-              />
-            </div>
-            {/* Adding a submit button for the form */}
-            <input
-              type="submit"
-              defaultValue="Add Contact"
-              className="btn btn-light btn-block"
-            />
-          </form>
-        </div>
-      </div>
-    );
-  }
+          </div>
+        );
+    }
 }
 
 export default AddContact;
