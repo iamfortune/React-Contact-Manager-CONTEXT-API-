@@ -13,6 +13,13 @@ class AddContact extends Component {
   // submit method for form submit button
   onSubmit = e => {
     e.preventDefault();
+    const contact = {
+      name: this.nameInput.current.value,
+      email: this.emailInput.current.value,
+      phone: this.phoneInput.current.value
+    }
+
+    console.log(contact);
   };
 
   static defaultProps = {
