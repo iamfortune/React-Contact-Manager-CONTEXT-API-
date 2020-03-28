@@ -4,7 +4,6 @@ class AddContact extends Component {
   // submit method for form submit button
   onSubmit = e => {
     e.preventDefault();
-    console.log(this.state);
   };
 
   static defaultProps = {
@@ -31,6 +30,7 @@ class AddContact extends Component {
                 className="form-control form-control-lg"
                 placeholder="Enter Name..."
                 defaultValue={name}
+                ref={this.nameInput}
               />
             </div>
             {/* Text input for email */}
@@ -42,6 +42,7 @@ class AddContact extends Component {
                 className="form-control form-control-lg"
                 placeholder="you@example.com"
                 defaultValue={email}
+                ref={this.emailInput}
               />
             </div>
             {/* text input for phone */}
@@ -53,6 +54,7 @@ class AddContact extends Component {
                 className="form-control form-control-lg"
                 placeholder="Enter Phone Number..."
                 defaultValue={phone}
+                ref={this.phoneInput}
               />
             </div>
             {/* Adding a submit button for the form */}
