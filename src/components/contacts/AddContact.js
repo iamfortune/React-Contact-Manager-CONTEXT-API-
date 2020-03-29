@@ -7,7 +7,7 @@ class AddContact extends Component {
         email: '',
         phone: ''
     }
-
+    
     // submit method for form submit button
     onSubmit = (dispatch, e) => {
         e.preventDefault();
