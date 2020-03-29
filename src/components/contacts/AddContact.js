@@ -21,7 +21,10 @@ class AddContact extends Component {
           email,
           phone
         }
-    }
+
+        dispatch({ type: 'ADD_CONTACT', payload:
+         newContact });
+    };
 
     // form submit method for input, this is used to update state as we type input
     onChange = e => this.setState({ [e.target.name]: 
