@@ -31,7 +31,7 @@ class AddContact extends Component {
                   <div className="card-header">Add Contact</div>
                   <div className="card-body">
                     {/* form submit handler */}
-                    <form onSubmit={this.onSubmit}>
+                    <form onSubmit={this.onSubmit.bind(this, dispatch)}>
                       {/* text input for name */}
                       <div className="form-group">
                         <label htmlFor="name">Name</label>
