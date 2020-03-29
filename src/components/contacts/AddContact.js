@@ -11,7 +11,14 @@ class AddContact extends Component {
     // submit method for form submit button
     onSubmit = (dispatch, e) => {
         e.preventDefault();
-        console.log(this.state);
+        
+        const { name, email, phone } = this.state;
+
+        const newContact = {
+          name,
+          email,
+          phone
+        }
     }
 
     // form submit method for input, this is used to update state as we type input
