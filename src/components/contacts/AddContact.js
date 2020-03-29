@@ -80,10 +80,9 @@ class AddContact extends Component {
                           onChange={this.onChange}
                         />
                       </div>
-                      {/* Adding a submit button for the form */}
                       <input
                         type="submit"
-                        value="Add Contact"
+                        value=
                         className="btn btn-light btn-block"
                       />
                     </form>
