@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Consumer } from '../../context';
+import uuid from 'uuid';
 
 class AddContact extends Component {
     state = {
