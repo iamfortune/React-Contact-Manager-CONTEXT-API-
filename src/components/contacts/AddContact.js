@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Consumer } from '../../context';
 
 class AddContact extends Component {
     state = {
