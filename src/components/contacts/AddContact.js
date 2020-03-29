@@ -24,13 +24,10 @@ class AddContact extends Component {
 
         return (
           <Consumer>
-            {value}
-          </Consumer>
-        )
-
-        return (
-          // mb-3 stands for margin bottom 3
-          <div className="card mb-3">
+            {value => {
+              const { dispatch } = value;
+              return (
+                     <div className="card mb-3">
             <div className="card-header">Add Contact</div>
             <div className="card-body">
                 {/* form submit handler */}
@@ -77,6 +74,10 @@ class AddContact extends Component {
                 />
               </form>
             </div>
+              )
+            }}
+          </Consumer>
+        )
           </div>
         );
     }
