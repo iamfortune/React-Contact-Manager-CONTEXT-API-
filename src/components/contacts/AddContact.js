@@ -21,6 +21,13 @@ class AddContact extends Component {
 
     render() {
         const { name, email, phone } = this.state;
+
+        return (
+          <Consumer>
+            {value}
+          </Consumer>
+        )
+
         return (
           // mb-3 stands for margin bottom 3
           <div className="card mb-3">
