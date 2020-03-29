@@ -9,7 +9,7 @@ class AddContact extends Component {
     }
 
     // submit method for form submit button
-    onSubmit = (e) => {
+    onSubmit = (dispatch, e) => {
         e.preventDefault();
         console.log(this.state);
     }
