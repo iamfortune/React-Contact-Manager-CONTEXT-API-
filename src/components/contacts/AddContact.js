@@ -14,6 +14,8 @@ class AddContact extends Component {
                     <form>
                         <div className="form-group">
                             <label htmlFor="name">Name</label>
+                            <input type="text" className="form-control
+                             form-control-lg"/>
                         </div>
                     </form>
                 </div>
