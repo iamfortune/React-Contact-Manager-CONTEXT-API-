@@ -1,9 +1,23 @@
 import React, { Component } from "react";
 
-class AddContact extends Component {
+class AddContact extends Component { 
+    constructor(props) {
+        super(props);
+
+        this.nameInput = React.createRef();
+        this.emailInput = React.createRef();
+        this.phoneInput = React.createRef();
+    }
+
+
+
   onSubmit = e => {
     e.preventDefault();
-    console.log(this.state);
+    const contact = {
+      name: this.nameInput.current.value,
+      email: this.emailInput.current.value,
+      phone: this.phoneInput.current.value
+    };
   };
 
   static defaultProps = {
@@ -28,6 +42,7 @@ class AddContact extends Component {
                 className="form-control form-control-lg"
                 placeholder="Enter Name..."
                 defaultValue={name}
+                ref={this.nameInput}
               />
             </div>
             {/* form group for email */}
@@ -39,7 +54,7 @@ class AddContact extends Component {
                 className="form-control form-control-lg"
                 placeholder="you@example.com"
                 defaultValue={email}
-                
+                ref={this.emailInput}
               />
             </div>
             {/* form group for phone number */}
@@ -51,7 +66,7 @@ class AddContact extends Component {
                 className="form-control form-control-lg"
                 placeholder="Enter Phone..."
                 defaultValue={phone}
-                
+                ref={this.phoneInput}
               />
             </div>
             <input
