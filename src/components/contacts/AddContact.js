@@ -7,7 +7,10 @@ class AddContact extends Component {
         phone: ''
     };
 
-    
+    onSubmit = (e) => {
+        e.preventDefault();
+        console.log(this.state);
+    }
 
     onChange = e => this.setState({ [e.target.name]: e.target.value });
 

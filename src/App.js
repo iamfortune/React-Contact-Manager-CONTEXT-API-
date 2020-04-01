@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Contacts from './components/contacts/Contacts';
 import Header from "./components/layout/Header";
 import AddContact from "./components/contacts/AddContact";
+import AddContact_ref from "./components/contacts/AddContact_ref";
 
 import { Provider } from './Context';
 
