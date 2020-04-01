@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Contacts from './components/contacts/Contacts';
 import Header from "./components/layout/Header";
-import AddContact from "./components/contacts/AddContact";
+// import AddContact from "./components/contacts/AddContact";
 import AddContact_ref from "./components/contacts/AddContact_ref";
 
 import { Provider } from './Context';
@@ -17,7 +17,7 @@ class App extends Component {
       <div className="App">
         <Header />
         <div className="container">
-          <AddContact />
+          <AddContact_ref />
         <Contacts />
         </div>
       </div>

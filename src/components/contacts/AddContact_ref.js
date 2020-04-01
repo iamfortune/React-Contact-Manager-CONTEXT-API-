@@ -6,9 +6,15 @@ class AddContact extends Component {
     console.log(this.state);
   };
 
+  static defaultProps = {
+    name: 'Fortune ikechi',
+    email: 'fortune@gmail.com',
+    phone: '33333333'
+  }
+
 
   render() {
-    const { name, email, phone } = this.state;
+    const { name, email, phone } = this.props;
     return (
       <div className="carb mb-3">
         <div className="card-header">Add Contact</div>
@@ -21,7 +27,7 @@ class AddContact extends Component {
                 name="name"
                 className="form-control form-control-lg"
                 placeholder="Enter Name..."
-                value={name}
+                defaultValue={name}
               />
             </div>
             {/* form group for email */}
@@ -32,7 +38,7 @@ class AddContact extends Component {
                 name="email"
                 className="form-control form-control-lg"
                 placeholder="you@example.com"
-                value={email}
+                defaultValue={email}
                 
               />
             </div>
@@ -44,13 +50,13 @@ class AddContact extends Component {
                 name="phone"
                 className="form-control form-control-lg"
                 placeholder="Enter Phone..."
-                value={phone}
+                defaultValue={phone}
                 
               />
             </div>
             <input
               type="submit"
-              value="Add Contact"
+              defaultValue="Add Contact"
               className="btn btn-light n  btn-block"
             />
           </form>
