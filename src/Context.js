@@ -15,8 +15,9 @@ const reducer = (state, action) => {
     case "ADD_CONTACT":
       return {
         ...state,
-        contacts: [action.payload,
-         ...state.contacts]
+        contacts: state.contacts.filter(
+          contact => contact.id !== action.payload
+        )
       };
     default:
       return state;
