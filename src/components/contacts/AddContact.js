@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Consumer } from '../../Context';
 
 class AddContact extends Component {
     state = {
@@ -17,6 +18,17 @@ class AddContact extends Component {
 
     render() {
         const { name, email, phone } = this.state;
+
+        return (
+            <Consumer>
+                {value => {
+                    const { dispatch } = value;
+                    return (
+                        
+                    )
+                }}
+            </Consumer>
+        )
         return (
           <div className="carb mb-3">
             <div className="card-header">Add Contact</div>
