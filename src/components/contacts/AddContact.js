@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Consumer } from '../../Context';
 
+
 class AddContact extends Component {
     state = {
         name: '',
@@ -11,13 +12,16 @@ class AddContact extends Component {
     onSubmit = (dispatch, e) => {
         e.preventDefault();
        
-        const { name, email, phone } = this.state;
+        const { id, name, email, phone } = this.state;
 
         const newContact = {
-            name,
-            email,
-            phone
-        }
+          id,
+          name,
+          email,
+          phone
+        };
+
+        dispatch({type: 'ADD_CONTACT', payload: newContact});
     }
 
     onChange = e => this.setState({ [e.target.name]: e.target.value });
