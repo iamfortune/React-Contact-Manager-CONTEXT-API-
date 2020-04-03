@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Consumer } from '../../Context';
+import { v4 as uuidv4 } from 'uuid';
 
 
 class AddContact extends Component {
@@ -12,10 +13,10 @@ class AddContact extends Component {
     onSubmit = (dispatch, e) => {
         e.preventDefault();
        
-        const { id, name, email, phone } = this.state;
+        const { name, email, phone } = this.state;
 
         const newContact = {
-          id,
+          id: uuidv4(),
           name,
           email,
           phone
