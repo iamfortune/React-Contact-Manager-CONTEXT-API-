@@ -20,10 +20,17 @@ class AddContact extends Component {
         //Check for erros and adding a required tag to the inputs
         if(name === '') {
             this.setState({errors: { name: 'Name is required'}});
+            return;
         }
 
         if(email === '') {
             this.setState({errors: { email: 'Email is required'}});
+            return;
+        }
+
+        if(phone === '') {
+            this.setState({errors: { phone: 'phone is required'}});
+            return;
         }
 
 
@@ -40,7 +47,8 @@ class AddContact extends Component {
         this.setState({
             name: '',
             email: '',
-            phone: ''
+            phone: '',
+            errors: {}
         });
     }
 
@@ -48,7 +56,7 @@ class AddContact extends Component {
 
 
     render() {
-        const { name, email, phone } = this.state;
+        const { name, email, phone, errors } = this.state;
 
         return (
             <Consumer>
@@ -66,6 +74,7 @@ class AddContact extends Component {
                             placeholder="Enter name..."
                             value={name}
                             onChange={this.onChange}
+                            error={errors.name}
                         />
 
                          <TextinputGroup
@@ -75,6 +84,7 @@ class AddContact extends Component {
                             placeholder="you@example.com"
                             value={email}
                             onChange={this.onChange}
+                            error={errors.email}
                         />
                          <TextinputGroup
                             label="Phone"
@@ -83,6 +93,7 @@ class AddContact extends Component {
                             placeholder="333-3333-333"
                             value={phone}
                             onChange={this.onChange}
+                            error={errors.phone}
                         />
                             <input
                               type="submit"
