@@ -8,13 +8,24 @@ class AddContact extends Component {
     state = {
         name: '',
         email: '',
-        phone: ''
+        phone: '',
+        errors: {}
     };
 
     onSubmit = (dispatch, e) => {
         e.preventDefault();
        
         const { name, email, phone } = this.state;
+
+        //Check for erros and adding a required tag to the inputs
+        if(name === '') {
+            this.setState({errors: { name: 'Name is required'}});
+        }
+
+        if(email === '') {
+            this.setState({errors: { email: 'Email is required'}});
+        }
+
 
         const newContact = {
           id: uuidv4(),
