@@ -48,41 +48,33 @@ class AddContact extends Component {
                         <div className="card-header">Add Contact</div>
                         <div className="card-body">
                           <form onSubmit={this.onSubmit.bind(this, dispatch)}>
-                            <div className="form-group">
-                              <label htmlFor="name">Name</label>
-                              <input
-                                type="text"
-                                name="name"
-                                className="form-control form-control-lg"
-                                placeholder="Enter Name..."
-                                value={name}
-                                onChange={this.onChange}
-                              />
-                            </div>
-                            {/* form group for email */}
-                            <div className="form-group">
-                              <label htmlFor="email">Email</label>
-                              <input
-                                type="email"
-                                name="email"
-                                className="form-control form-control-lg"
-                                placeholder="you@example.com"
-                                value={email}
-                                onChange={this.onChange}
-                              />
-                            </div>
-                            {/* form group for phone number */}
-                            <div className="form-group">
-                              <label htmlFor="phone">Phonee</label>
-                              <input
-                                type="text"
-                                name="phone"
-                                className="form-control form-control-lg"
-                                placeholder="Enter Phone..."
-                                value={phone}
-                                onChange={this.onChange}
-                              />
-                            </div>
+
+                           <TextinputGroup
+                            label="Name"
+                            name="name"
+                            placeholder="Enter name..."
+                            value={name}
+                            onChange={this.onChange}
+                        />
+
+                         <TextinputGroup
+                            label="Email"
+                            name="email"
+                            type="email"
+                            placeholder="you@example.com"
+                            value={email}
+                            onChange={this.onChange}
+                        />
+
+                         <TextinputGroup
+                            label="Phone"
+                            name="phone"
+                            type="phone"
+                            placeholder="333-3333-333"
+                            value={phone}
+                            onChange={this.onChange}
+                        />
+
                             <input
                               type="submit"
                               value="Add Contact"
