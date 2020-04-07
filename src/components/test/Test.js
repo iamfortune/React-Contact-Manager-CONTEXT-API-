@@ -1,6 +1,12 @@
 import React, { Component } from 'react'
 
 class Test extends Component {
+    state = {
+        test: 'test'
+    }
+
+
+
   componentDidMount() {
     console.log("componentDidmount");
     //usually good for making AJAX calls and API requests
@@ -24,8 +30,18 @@ class Test extends Component {
   }
 
   static getDerivedStateFromProps(nextProps, prevstate) {
-      console.log('this is a new version of componentWillReceiveProps');
+      return {
+          test: 'fortune ikechi'
+      }
+       //this is a new version of componentWillReceiveProps
   }
+     
+  getSnapshotBeforeUpdate(prevProps, prevState) {
+      console.log('componentWillReceiveProps...');
+      //not always used in applications, still new
+  }
+      
+  
 
 
   render() {
