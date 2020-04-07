@@ -1,13 +1,40 @@
 import React, { Component } from 'react'
 
 class Test extends Component {
-    render() {
-        return (
-            <div>
-                <h1>Test component</h1>
-            </div>
-        )
-    }
+  componentDidMount() {
+    console.log("componentDidmount");
+    //usually good for making AJAX calls and API requests
+  }
+
+  UNSAFE_componentWillMount() {
+      console.log('componentWillMount');
+  }
+
+  UNSAFE_componentDidUpdate() {
+      console.log('componentDidUpdate');
+  }
+
+  UNSAFE_componentWillUpdate() {
+      console.log('componentWillUpdate');
+  }
+
+  UNSAFE_componentWillReceiveProps(nextProps, nextState) {
+      console.log('componentWillReceiveProps');
+      //usually used in redux, for when you have real states in redux
+  }
+
+  static getDerivedStateFromProps(nextProps, prevstate) {
+      console.log('this is a new version of componentWillReceiveProps');
+  }
+
+
+  render() {
+    return (
+      <div>
+        <h1>Test component</h1>
+      </div>
+    );
+  }
 }
 
 export default Test;
