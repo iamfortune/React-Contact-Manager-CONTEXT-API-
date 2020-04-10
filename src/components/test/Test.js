@@ -9,7 +9,10 @@ class Test extends Component {
     componentDidMount() {
         fetch("https://jsonplaceholder.typicode.com/todos/1")
           .then(response => response.json())
-          .then(data => this.setState());
+          .then(data => this.setState({
+              title: data.title,
+              completed: data.completed
+          }));
     }
 
 
@@ -49,9 +52,11 @@ class Test extends Component {
       
   
   render() {
+      const  { title, completed } = this.state;
     return (
       <div>
-        <h1>Test component</h1>
+        <h1>{title}</h1>
+        <p>{completed}</p>
       </div>
     );
   }
