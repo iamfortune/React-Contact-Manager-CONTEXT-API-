@@ -11,6 +11,8 @@ class Contact extends Component {
 
 // when there is arrow functions do the async b4 the parameters 
 
+// since we are not getting anything in onDelete, we dont have to put it in const, cos its returning an empty variable
+
     onDeleteClick = async (id, dispatch) => {
       await axios.delete
       (`https://jsonplaceholder.typicode.com/users/${id}`)
