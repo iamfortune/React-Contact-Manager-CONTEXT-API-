@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import axios from 'axios';
 
 
 const Context = React.createContext();
@@ -32,7 +33,9 @@ export class Provider extends Component {
   };
 
   
-  UNSAFE_componentDidMount() {
+  componentDidMount() {
+    axios.get('https://jsonplaceholder.typicode.com/users')
+    .then(res => this.setState({contacts: res.data}));
   }
 
   render() {
