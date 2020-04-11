@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/kay-contact-manager/static/css/main.36497136.chunk.css",
+    "main.js": "/kay-contact-manager/static/js/main.fd51115a.chunk.js",
+    "main.js.map": "/kay-contact-manager/static/js/main.fd51115a.chunk.js.map",
+    "runtime-main.js": "/kay-contact-manager/static/js/runtime-main.67c88432.js",
+    "runtime-main.js.map": "/kay-contact-manager/static/js/runtime-main.67c88432.js.map",
+    "static/css/2.47e06e2e.chunk.css": "/kay-contact-manager/static/css/2.47e06e2e.chunk.css",
+    "static/js/2.c690ea2b.chunk.js": "/kay-contact-manager/static/js/2.c690ea2b.chunk.js",
+    "static/js/2.c690ea2b.chunk.js.map": "/kay-contact-manager/static/js/2.c690ea2b.chunk.js.map",
+    "index.html": "/kay-contact-manager/index.html",
+    "precache-manifest.a8b8ff1120c646770d6ef6a60914ffb5.js": "/kay-contact-manager/precache-manifest.a8b8ff1120c646770d6ef6a60914ffb5.js",
+    "service-worker.js": "/kay-contact-manager/service-worker.js",
+    "static/css/2.47e06e2e.chunk.css.map": "/kay-contact-manager/static/css/2.47e06e2e.chunk.css.map",
+    "static/css/main.36497136.chunk.css.map": "/kay-contact-manager/static/css/main.36497136.chunk.css.map",
+    "static/js/2.c690ea2b.chunk.js.LICENSE.txt": "/kay-contact-manager/static/js/2.c690ea2b.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.67c88432.js",
+    "static/css/2.47e06e2e.chunk.css",
+    "static/js/2.c690ea2b.chunk.js",
+    "static/css/main.36497136.chunk.css",
+    "static/js/main.fd51115a.chunk.js"
+  ]
+}
