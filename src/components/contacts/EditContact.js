@@ -32,19 +32,7 @@ class EditContact extends Component {
       return;
     }
 
-    const newContact = {
-      name,
-      email,
-      phone,
-    };
-
-    const res = await axios.post(
-      "https://jsonplaceholder.typicode.com/users",
-      newContact
-    );
-
-    dispatch({ type: "ADD_CONTACT", payload: res.data });
-
+   
     //clear state
     this.setState({
       name: "",
@@ -99,7 +87,7 @@ class EditContact extends Component {
                   />
                   <input
                     type="submit"
-                    value="Add Contact"
+                    value="Edit Contact"
                     className="btn btn-light n  btn-block"
                   />
                 </form>
