@@ -6,7 +6,6 @@ import axios from "axios";
 class AddContact extends Component {
   state = {
     name: "",
-    email: "",
     phone: "",
     errors: {},
   };
@@ -14,16 +13,11 @@ class AddContact extends Component {
   onSubmit = async (dispatch, e) => {
     e.preventDefault();
 
-    const { name, email, phone } = this.state;
+    const { name, phone } = this.state;
 
     // Check For Errors
     if (name === "") {
       this.setState({ errors: { name: "Name is required" } });
-      return;
-    }
-
-    if (email === "") {
-      this.setState({ errors: { email: "Email is required" } });
       return;
     }
 
@@ -34,7 +28,6 @@ class AddContact extends Component {
 
     const newContact = {
       name,
-      email,
       phone,
     };
 
@@ -48,7 +41,6 @@ class AddContact extends Component {
     // Clear State
     this.setState({
       name: "",
-      email: "",
       phone: "",
       errors: {},
     });
@@ -59,7 +51,7 @@ class AddContact extends Component {
   onChange = (e) => this.setState({ [e.target.name]: e.target.value });
 
   render() {
-    const { name, email, phone, errors } = this.state;
+    const { name, phone, errors } = this.state;
 
     return (
       <Consumer>
@@ -77,15 +69,6 @@ class AddContact extends Component {
                     value={name}
                     onChange={this.onChange}
                     error={errors.name}
-                  />
-                  <TextInputGroup
-                    label="Email"
-                    name="email"
-                    type="email"
-                    placeholder="Enter Email"
-                    value={email}
-                    onChange={this.onChange}
-                    error={errors.email}
                   />
                   <TextInputGroup
                     label="Phone"
